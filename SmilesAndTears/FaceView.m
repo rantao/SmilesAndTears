@@ -27,13 +27,24 @@
 */
 - (void)drawRect:(CGRect)rect
 {
-    // Drawing code
     CGContextRef context = UIGraphicsGetCurrentContext();
+
+    
+    // Draw strobe lights
+    [self drawStrobesinContext:context];
+    
+    // Draw guy
+    [self drawGuyinContext:context];
+   
+}
+
+-(void) drawGuyinContext: (CGContextRef) context {
+    UIGraphicsPushContext(context);
     CGRect bounds  = self.bounds;
     self.backgroundColor = [self randomColor];
     //[[self randomColor] set];
     [[UIColor blackColor] set ];
-
+    
     //define all points for bezier curve
     CGPoint start = CGPointMake(bounds.origin.x + bounds.size.width/4.0, bounds.origin.y + bounds.size.height);
     CGPoint controlPoint1 = CGPointMake(bounds.origin.x + bounds.size.width/2.0, bounds.origin.y + bounds.size.height*7.0/8.0);
@@ -60,7 +71,28 @@
     CGContextFillPath(context);
     CGContextAddArc(context,leftEyeLocation.x, leftEyeLocation.y, eyeRadius/2.0, 0.0, M_PI*2.0, YES);
     CGContextFillPath(context);
-   
+    UIGraphicsPopContext();
+}
+
+-(void) drawStrobesinContext: (CGContextRef) context {
+    UIGraphicsPushContext(context);
+    CGRect bounds  = self.bounds;
+    // Define strobe start point
+    CGPoint start = CGPointMake(bounds.origin.x + bounds.size.width/2.0, bounds.origin.y);
+    
+    CGContextMoveToPoint(context, start.x, start.y);
+    
+    // Define strobe end point
+    CGPoint end = [self randomStrobeEndPoint];
+    
+    CGContextAddLineToPoint(context, end.x, end.y);
+    CGContextAddLineToPoint(context, end.x + 20, end.y);
+    
+    //CGContextDrawLinearGradient(<#CGContextRef context#>, <#CGGradientRef gradient#>, <#CGPoint startPoint#>, <#CGPoint endPoint#>, <#CGGradientDrawingOptions options#>)
+    [[self randomStrobeColor] set];
+    CGContextFillPath(context);
+    
+    UIGraphicsPopContext();
 }
 
 -(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -75,8 +107,27 @@
     return 1 - arc4random() % 11 * 0.01;
 }
 
+-(float) randomHighIntensity {
+    //return arc4random() % 11 * 0.1;
+    // limit intensity to be very low
+    return 1-arc4random() % 11 * 0.05;
+}
+
+
+
+-(CGPoint) randomStrobeEndPoint {
+    float temp = (float) self.bounds.size.width;
+    double randomNumber = (double) arc4random() / INT_MAX * temp;
+    
+    return CGPointMake((CGFloat)randomNumber, self.bounds.size.height);
+}
+
 - (UIColor*) randomColor {
     return [UIColor colorWithRed:[self randomIntensity] green:[self randomIntensity]  blue:[self randomIntensity]  alpha:1];
+}
+
+- (UIColor*) randomStrobeColor {
+    return [UIColor colorWithRed:[self randomHighIntensity] green:[self randomHighIntensity]  blue:[self randomHighIntensity]  alpha:1];
 }
 
 @end
