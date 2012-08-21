@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2528C01A15E408000028252D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2528C01915E408000028252D /* UIKit.framework */; };
+		2528C01C15E408000028252D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2528C01B15E408000028252D /* Foundation.framework */; };
+		2528C01E15E408000028252D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2528C01D15E408000028252D /* CoreGraphics.framework */; };
+		2528C02415E408000028252D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2528C02215E408000028252D /* InfoPlist.strings */; };
+		2528C02615E408000028252D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2528C02515E408000028252D /* main.m */; };
+		2528C02A15E408000028252D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2528C02915E408000028252D /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2528C01515E408000028252D /* SmilesAndTears.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmilesAndTears.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2528C01915E408000028252D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2528C01B15E408000028252D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2528C01D15E408000028252D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2528C02115E408000028252D /* SmilesAndTears-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SmilesAndTears-Info.plist"; sourceTree = "<group>"; };
+		2528C02315E408000028252D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2528C02515E408000028252D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2528C02715E408000028252D /* SmilesAndTears-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmilesAndTears-Prefix.pch"; sourceTree = "<group>"; };
+		2528C02815E408000028252D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2528C02915E408000028252D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2528C01215E408000028252D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2528C01A15E408000028252D /* UIKit.framework in Frameworks */,
+				2528C01C15E408000028252D /* Foundation.framework in Frameworks */,
+				2528C01E15E408000028252D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2528C00A15E408000028252D = {
+			isa = PBXGroup;
+			children = (
+				2528C01F15E408000028252D /* SmilesAndTears */,
+				2528C01815E408000028252D /* Frameworks */,
+				2528C01615E408000028252D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2528C01615E408000028252D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2528C01515E408000028252D /* SmilesAndTears.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2528C01815E408000028252D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2528C01915E408000028252D /* UIKit.framework */,
+				2528C01B15E408000028252D /* Foundation.framework */,
+				2528C01D15E408000028252D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2528C01F15E408000028252D /* SmilesAndTears */ = {
+			isa = PBXGroup;
+			children = (
+				2528C02815E408000028252D /* AppDelegate.h */,
+				2528C02915E408000028252D /* AppDelegate.m */,
+				2528C02015E408000028252D /* Supporting Files */,
+			);
+			path = SmilesAndTears;
+			sourceTree = "<group>";
+		};
+		2528C02015E408000028252D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2528C02115E408000028252D /* SmilesAndTears-Info.plist */,
+				2528C02215E408000028252D /* InfoPlist.strings */,
+				2528C02515E408000028252D /* main.m */,
+				2528C02715E408000028252D /* SmilesAndTears-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2528C01415E408000028252D /* SmilesAndTears */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2528C02D15E408000028252D /* Build configuration list for PBXNativeTarget "SmilesAndTears" */;
+			buildPhases = (
+				2528C01115E408000028252D /* Sources */,
+				2528C01215E408000028252D /* Frameworks */,
+				2528C01315E408000028252D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmilesAndTears;
+			productName = SmilesAndTears;
+			productReference = 2528C01515E408000028252D /* SmilesAndTears.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2528C00C15E408000028252D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Ran Tao";
+			};
+			buildConfigurationList = 2528C00F15E408000028252D /* Build configuration list for PBXProject "SmilesAndTears" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2528C00A15E408000028252D;
+			productRefGroup = 2528C01615E408000028252D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2528C01415E408000028252D /* SmilesAndTears */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2528C01315E408000028252D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2528C02415E408000028252D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2528C01115E408000028252D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2528C02615E408000028252D /* main.m in Sources */,
+				2528C02A15E408000028252D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2528C02215E408000028252D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2528C02315E408000028252D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2528C02B15E408000028252D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2528C02C15E408000028252D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2528C02E15E408000028252D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmilesAndTears/SmilesAndTears-Prefix.pch";
+				INFOPLIST_FILE = "SmilesAndTears/SmilesAndTears-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2528C02F15E408000028252D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmilesAndTears/SmilesAndTears-Prefix.pch";
+				INFOPLIST_FILE = "SmilesAndTears/SmilesAndTears-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2528C00F15E408000028252D /* Build configuration list for PBXProject "SmilesAndTears" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2528C02B15E408000028252D /* Debug */,
+				2528C02C15E408000028252D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2528C02D15E408000028252D /* Build configuration list for PBXNativeTarget "SmilesAndTears" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2528C02E15E408000028252D /* Debug */,
+				2528C02F15E408000028252D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2528C00C15E408000028252D /* Project object */;
+}
