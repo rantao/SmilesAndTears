@@ -13,6 +13,11 @@
 		2528C02415E408000028252D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2528C02215E408000028252D /* InfoPlist.strings */; };
 		2528C02615E408000028252D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2528C02515E408000028252D /* main.m */; };
 		2528C02A15E408000028252D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2528C02915E408000028252D /* AppDelegate.m */; };
+		2528C03315E40A820028252D /* SmilesAndTearsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2528C03115E40A820028252D /* SmilesAndTearsViewController.m */; };
+		2528C03415E40A820028252D /* SmilesAndTearsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2528C03215E40A820028252D /* SmilesAndTearsViewController.xib */; };
+		2528C03B15E41BBE0028252D /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2528C03A15E41BBE0028252D /* FaceView.m */; };
+		25526CD215E442C100FC1206 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25526CD115E442C100FC1206 /* AVFoundation.framework */; };
+		25526CD515E4433000FC1206 /* waters.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25526CD415E4433000FC1206 /* waters.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,13 @@
 		2528C02715E408000028252D /* SmilesAndTears-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmilesAndTears-Prefix.pch"; sourceTree = "<group>"; };
 		2528C02815E408000028252D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2528C02915E408000028252D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2528C03015E40A820028252D /* SmilesAndTearsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmilesAndTearsViewController.h; sourceTree = "<group>"; };
+		2528C03115E40A820028252D /* SmilesAndTearsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmilesAndTearsViewController.m; sourceTree = "<group>"; };
+		2528C03215E40A820028252D /* SmilesAndTearsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmilesAndTearsViewController.xib; sourceTree = "<group>"; };
+		2528C03915E41BBE0028252D /* FaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceView.h; sourceTree = "<group>"; };
+		2528C03A15E41BBE0028252D /* FaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceView.m; sourceTree = "<group>"; };
+		25526CD115E442C100FC1206 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		25526CD415E4433000FC1206 /* waters.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = waters.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25526CD215E442C100FC1206 /* AVFoundation.framework in Frameworks */,
 				2528C01A15E408000028252D /* UIKit.framework in Frameworks */,
 				2528C01C15E408000028252D /* Foundation.framework in Frameworks */,
 				2528C01E15E408000028252D /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +75,7 @@
 		2528C01815E408000028252D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25526CD115E442C100FC1206 /* AVFoundation.framework */,
 				2528C01915E408000028252D /* UIKit.framework */,
 				2528C01B15E408000028252D /* Foundation.framework */,
 				2528C01D15E408000028252D /* CoreGraphics.framework */,
@@ -72,8 +86,14 @@
 		2528C01F15E408000028252D /* SmilesAndTears */ = {
 			isa = PBXGroup;
 			children = (
+				25526CD415E4433000FC1206 /* waters.mp3 */,
 				2528C02815E408000028252D /* AppDelegate.h */,
 				2528C02915E408000028252D /* AppDelegate.m */,
+				2528C03915E41BBE0028252D /* FaceView.h */,
+				2528C03A15E41BBE0028252D /* FaceView.m */,
+				2528C03015E40A820028252D /* SmilesAndTearsViewController.h */,
+				2528C03115E40A820028252D /* SmilesAndTearsViewController.m */,
+				2528C03215E40A820028252D /* SmilesAndTearsViewController.xib */,
 				2528C02015E408000028252D /* Supporting Files */,
 			);
 			path = SmilesAndTears;
@@ -142,6 +162,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2528C02415E408000028252D /* InfoPlist.strings in Resources */,
+				2528C03415E40A820028252D /* SmilesAndTearsViewController.xib in Resources */,
+				25526CD515E4433000FC1206 /* waters.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +176,8 @@
 			files = (
 				2528C02615E408000028252D /* main.m in Sources */,
 				2528C02A15E408000028252D /* AppDelegate.m in Sources */,
+				2528C03315E40A820028252D /* SmilesAndTearsViewController.m in Sources */,
+				2528C03B15E41BBE0028252D /* FaceView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +285,7 @@
 				2528C02F15E408000028252D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

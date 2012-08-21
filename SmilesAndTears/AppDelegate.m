@@ -7,13 +7,19 @@
 //
 
 #import "AppDelegate.h"
+#import "SmilesAndTearsViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+
     // Override point for customization after application launch.
+    SmilesAndTearsViewController *satvc = [SmilesAndTearsViewController new];
+    self.window.rootViewController = satvc;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
