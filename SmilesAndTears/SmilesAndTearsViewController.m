@@ -6,11 +6,9 @@
 //  Copyright (c) 2012 Ran Tao. All rights reserved.
 //
 
-#import <AVFoundation/AVFoundation.h>
 #import "SmilesAndTearsViewController.h"
 
 @interface SmilesAndTearsViewController () 
-@property (strong, nonatomic) AVAudioPlayer *musicPlayer;
 
 @end
 
@@ -29,11 +27,7 @@
 {
     [super viewDidLoad];
     // Add some awesome beats here
-    
-    NSString *music = [[NSBundle mainBundle] pathForResource:@"waters" ofType:@"mp3"];
-    self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:music] error:NULL];
-    self.musicPlayer.delegate;
-    [self.musicPlayer play];
+ 
 }
 
 - (void)viewDidUnload

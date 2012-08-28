@@ -6,7 +6,15 @@
 //  Copyright (c) 2012 Ran Tao. All rights reserved.
 //
 
+
+#import <AVFoundation/AVFoundation.h>
 #import "FaceView.h"
+
+
+@interface FaceView() <AVAudioPlayerDelegate>
+@property (strong, nonatomic) AVAudioPlayer *musicPlayer;
+@end
+
 
 @implementation FaceView {
     CGPoint touchLocation;
@@ -20,6 +28,22 @@
     }
     return self;
 }
+
+
+-(void) awakeFromNib {
+    // Load background music
+    [self loadMusic];
+    
+}
+
+
+-(void) loadMusic {
+    NSString *music = [[NSBundle mainBundle] pathForResource:@"waters" ofType:@"mp3"];
+    self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:music] error:NULL];
+    self.musicPlayer.delegate;
+    [self.musicPlayer prepareToPlay];
+}
+
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -100,6 +124,17 @@
     touchLocation = [touch locationInView:touch.view];
     [self setNeedsDisplay];
 }
+
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.musicPlayer play];
+    
+}
+
+-(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.musicPlayer stop];
+    
+}
+
 
 -(float) randomIntensity {
     //return arc4random() % 11 * 0.1;
