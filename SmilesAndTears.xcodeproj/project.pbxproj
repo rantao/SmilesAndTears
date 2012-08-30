@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		251C32D315EF311400099134 /* MusicLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251C32D215EF311400099134 /* MusicLibraryViewController.m */; };
 		251C32D615EF328100099134 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251C32D515EF328100099134 /* MediaPlayer.framework */; };
 		2528C01A15E408000028252D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2528C01915E408000028252D /* UIKit.framework */; };
 		2528C01C15E408000028252D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2528C01B15E408000028252D /* Foundation.framework */; };
@@ -23,8 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		251C32D115EF311400099134 /* MusicLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicLibraryViewController.h; sourceTree = "<group>"; };
-		251C32D215EF311400099134 /* MusicLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicLibraryViewController.m; sourceTree = "<group>"; };
 		251C32D515EF328100099134 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		2528C01515E408000028252D /* SmilesAndTears.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmilesAndTears.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2528C01915E408000028252D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -101,8 +98,6 @@
 				2528C03015E40A820028252D /* SmilesAndTearsViewController.h */,
 				2528C03115E40A820028252D /* SmilesAndTearsViewController.m */,
 				2528C03215E40A820028252D /* SmilesAndTearsViewController.xib */,
-				251C32D115EF311400099134 /* MusicLibraryViewController.h */,
-				251C32D215EF311400099134 /* MusicLibraryViewController.m */,
 				2528C02015E408000028252D /* Supporting Files */,
 			);
 			path = SmilesAndTears;
@@ -187,7 +182,6 @@
 				2528C02A15E408000028252D /* AppDelegate.m in Sources */,
 				2528C03315E40A820028252D /* SmilesAndTearsViewController.m in Sources */,
 				2528C03B15E41BBE0028252D /* FaceView.m in Sources */,
-				251C32D315EF311400099134 /* MusicLibraryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
