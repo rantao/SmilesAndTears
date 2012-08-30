@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface SmilesAndTearsViewController : UIViewController
+
+@interface SmilesAndTearsViewController : UIViewController <MPMediaPickerControllerDelegate>
+- (IBAction)musicButtonPressed:(UIButton *)sender;
 
 @end
