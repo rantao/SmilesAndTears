@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251C32D615EF328100099134 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251C32D515EF328100099134 /* MediaPlayer.framework */; };
 		2528C01A15E408000028252D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2528C01915E408000028252D /* UIKit.framework */; };
 		2528C01C15E408000028252D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2528C01B15E408000028252D /* Foundation.framework */; };
 		2528C01E15E408000028252D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2528C01D15E408000028252D /* CoreGraphics.framework */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		251C32D515EF328100099134 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		2528C01515E408000028252D /* SmilesAndTears.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmilesAndTears.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2528C01915E408000028252D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2528C01B15E408000028252D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				251C32D615EF328100099134 /* MediaPlayer.framework in Frameworks */,
 				25526CD215E442C100FC1206 /* AVFoundation.framework in Frameworks */,
 				2528C01A15E408000028252D /* UIKit.framework in Frameworks */,
 				2528C01C15E408000028252D /* Foundation.framework in Frameworks */,
@@ -75,6 +78,7 @@
 		2528C01815E408000028252D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				251C32D515EF328100099134 /* MediaPlayer.framework */,
 				25526CD115E442C100FC1206 /* AVFoundation.framework */,
 				2528C01915E408000028252D /* UIKit.framework */,
 				2528C01B15E408000028252D /* Foundation.framework */,

@@ -8,8 +8,10 @@
 
 #import "SmilesAndTearsViewController.h"
 
-@interface SmilesAndTearsViewController () 
-
+@interface SmilesAndTearsViewController ()
+@property (nonatomic, retain)	MPMusicPlayerController	*musicPlayerFromLibrary;
+@property (nonatomic, strong) MPMediaItem *nowPlayingItem;
+@property (nonatomic) NSTimeInterval currentPlaybackTime;
 @end
 
 @implementation SmilesAndTearsViewController
@@ -18,7 +20,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.musicPlayerFromLibrary = [MPMusicPlayerController new];
+        
     }
     return self;
 }
@@ -26,8 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Add some awesome beats here
- 
+    
 }
 
 - (void)viewDidUnload
@@ -37,9 +39,59 @@
     // e.g. self.myOutlet = nil;
 }
 
+
+
+- (void) mediaPicker: (MPMediaPickerController *) mediaPicker didPickMediaItems: (MPMediaItemCollection *) collection {
+    
+    [self updatePlayerQueueWithMediaCollection: collection];
+    [self dismissModalViewControllerAnimated: YES];
+    
+}
+
+- (void) mediaPickerDidCancel: (MPMediaPickerController *) mediaPicker {
+    
+    [self dismissModalViewControllerAnimated: YES];
+}
+
+
+- (void) updatePlayerQueueWithMediaCollection: (MPMediaItemCollection *) mediaItemCollection {
+    
+    [self.musicPlayerFromLibrary setQueueWithItemCollection: mediaItemCollection];
+    self.currentPlaybackTime = 0;
+    
+}
+
+
+- (IBAction)musicButtonPressed:(UIButton *)sender {
+    MPMediaPickerController *picker =
+    [[MPMediaPickerController alloc] initWithMediaTypes: MPMediaTypeAnyAudio];
+    
+    [picker setDelegate: self];
+    [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleBlackOpaque animated: YES];
+    
+    
+    [self presentModalViewController: picker animated: YES];
+}
+
+
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    self.musicPlayerFromLibrary.nowPlayingItem			= self.nowPlayingItem;
+    self.musicPlayerFromLibrary.currentPlaybackTime		= self.currentPlaybackTime;
+    [self.musicPlayerFromLibrary play]; 
+    
+}
+
+-(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    self.nowPlayingItem = self.musicPlayerFromLibrary.nowPlayingItem;
+    self.currentPlaybackTime	= self.musicPlayerFromLibrary.currentPlaybackTime;
+    [self.musicPlayerFromLibrary stop];
+
+    
+}
+
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
 @end

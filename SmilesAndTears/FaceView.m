@@ -10,9 +10,9 @@
 #import <AVFoundation/AVFoundation.h>
 #import "FaceView.h"
 
-
 @interface FaceView() <AVAudioPlayerDelegate>
 @property (strong, nonatomic) AVAudioPlayer *musicPlayer;
+
 @end
 
 
@@ -38,11 +38,14 @@
 
 
 -(void) loadMusic {
-    NSString *music = [[NSBundle mainBundle] pathForResource:@"waters" ofType:@"mp3"];
-    self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:music] error:NULL];
-    self.musicPlayer.delegate;
-    [self.musicPlayer prepareToPlay];
+// ####### AUTO PLAY ########
+//    NSString *music = [[NSBundle mainBundle] pathForResource:@"waters" ofType:@"mp3"];
+//    self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:music] error:NULL];
+//    self.musicPlayer.delegate;
+//    [self.musicPlayer prepareToPlay];
+    
 }
+
 
 
 /*
@@ -66,7 +69,6 @@
     UIGraphicsPushContext(context);
     CGRect bounds  = self.bounds;
     self.backgroundColor = [self randomColor];
-    //[[self randomColor] set];
     [[UIColor blackColor] set ];
     
     //define all points for bezier curve
@@ -112,7 +114,6 @@
     CGContextAddLineToPoint(context, end.x, end.y);
     CGContextAddLineToPoint(context, end.x + 20, end.y);
     
-    //CGContextDrawLinearGradient(<#CGContextRef context#>, <#CGGradientRef gradient#>, <#CGPoint startPoint#>, <#CGPoint endPoint#>, <#CGGradientDrawingOptions options#>)
     [[self randomStrobeColor] set];
     CGContextFillPath(context);
     
@@ -123,16 +124,6 @@
     UITouch *touch = [[event allTouches] anyObject];
     touchLocation = [touch locationInView:touch.view];
     [self setNeedsDisplay];
-}
-
--(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self.musicPlayer play];
-    
-}
-
--(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self.musicPlayer stop];
-    
 }
 
 
@@ -152,8 +143,7 @@
 
 -(CGPoint) randomStrobeEndPoint {
     float temp = (float) self.bounds.size.width;
-    double randomNumber = (double) arc4random() / INT_MAX * temp;
-    
+    double randomNumber = (double) arc4random() / INT_MAX * temp - temp/2.0;
     return CGPointMake((CGFloat)randomNumber, self.bounds.size.height);
 }
 
