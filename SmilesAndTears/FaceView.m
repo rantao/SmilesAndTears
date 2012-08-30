@@ -7,11 +7,11 @@
 //
 
 
-#import <AVFoundation/AVFoundation.h>
 #import "FaceView.h"
+#import "MBProgressHUD.h"
 
-@interface FaceView() <AVAudioPlayerDelegate>
-@property (strong, nonatomic) AVAudioPlayer *musicPlayer;
+
+@interface FaceView() <MBProgressHUDDelegate>
 
 @end
 
@@ -31,38 +31,41 @@
 
 
 -(void) awakeFromNib {
-    // Load background music
-    [self loadMusic];
-    
+    [self newMBProgressHUD];
 }
 
-
--(void) loadMusic {
-// ####### AUTO PLAY ########
-//    NSString *music = [[NSBundle mainBundle] pathForResource:@"waters" ofType:@"mp3"];
-//    self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:music] error:NULL];
-//    self.musicPlayer.delegate;
-//    [self.musicPlayer prepareToPlay];
-    
+-(void)viewDidAppear:(BOOL)animated {
 }
 
+- (void)newMBProgressHUD {
+    MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self];
+	[self addSubview:HUD];
+    HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"star_24.png"]];
+    HUD.mode = MBProgressHUDModeCustomView;
+    HUD.delegate = self;
+    HUD.labelText = @"Ready for a dance party?";
+    HUD.detailsLabelText = @"Pick a music track and scrub the screen to get the party started now :)";
+    
+    [HUD show:YES];
+    [HUD hide:YES afterDelay:8];
+}
 
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ */
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
-
+    
     
     // Draw strobe lights
     [self drawStrobesinContext:context];
     
     // Draw guy
     [self drawGuyinContext:context];
-   
+    
 }
 
 -(void) drawGuyinContext: (CGContextRef) context {

@@ -7,6 +7,7 @@
 //
 
 #import "SmilesAndTearsViewController.h"
+#import "MBProgressHUD.h"
 
 @interface SmilesAndTearsViewController ()
 @property (nonatomic, retain)	MPMusicPlayerController	*musicPlayerFromLibrary;
@@ -29,8 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 }
+
 
 - (void)viewDidUnload
 {
@@ -38,6 +39,7 @@
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
+
 
 
 
@@ -63,6 +65,7 @@
 
 
 - (IBAction)musicButtonPressed:(UIButton *)sender {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     MPMediaPickerController *picker =
     [[MPMediaPickerController alloc] initWithMediaTypes: MPMediaTypeAnyAudio];
     
@@ -77,7 +80,7 @@
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     self.musicPlayerFromLibrary.nowPlayingItem			= self.nowPlayingItem;
     self.musicPlayerFromLibrary.currentPlaybackTime		= self.currentPlaybackTime;
-    [self.musicPlayerFromLibrary play]; 
+    [self.musicPlayerFromLibrary play];
     
 }
 
@@ -85,7 +88,7 @@
     self.nowPlayingItem = self.musicPlayerFromLibrary.nowPlayingItem;
     self.currentPlaybackTime	= self.musicPlayerFromLibrary.currentPlaybackTime;
     [self.musicPlayerFromLibrary stop];
-
+    
     
 }
 

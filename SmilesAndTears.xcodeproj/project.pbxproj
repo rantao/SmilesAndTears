@@ -18,11 +18,12 @@
 		2528C03415E40A820028252D /* SmilesAndTearsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2528C03215E40A820028252D /* SmilesAndTearsViewController.xib */; };
 		2528C03B15E41BBE0028252D /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2528C03A15E41BBE0028252D /* FaceView.m */; };
 		25526CD215E442C100FC1206 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25526CD115E442C100FC1206 /* AVFoundation.framework */; };
-		25526CD515E4433000FC1206 /* waters.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25526CD415E4433000FC1206 /* waters.mp3 */; };
 		25D3136915EF63D1004A6D0D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D3136815EF63D1004A6D0D /* Icon.png */; };
 		25D3136C15EF63DA004A6D0D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D3136B15EF63DA004A6D0D /* Icon@2x.png */; };
 		25D3136E15EF6498004A6D0D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D3136D15EF6498004A6D0D /* Default@2x.png */; };
 		25D3137015EF649E004A6D0D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D3136F15EF649E004A6D0D /* Default.png */; };
+		25D3137315EF68C0004A6D0D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D3137215EF68C0004A6D0D /* MBProgressHUD.m */; };
+		25D3137515EF73AF004A6D0D /* star_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 25D3137415EF73AF004A6D0D /* star_24.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,11 +44,13 @@
 		2528C03915E41BBE0028252D /* FaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceView.h; sourceTree = "<group>"; };
 		2528C03A15E41BBE0028252D /* FaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceView.m; sourceTree = "<group>"; };
 		25526CD115E442C100FC1206 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		25526CD415E4433000FC1206 /* waters.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = waters.mp3; sourceTree = "<group>"; };
 		25D3136815EF63D1004A6D0D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		25D3136B15EF63DA004A6D0D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		25D3136D15EF6498004A6D0D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		25D3136F15EF649E004A6D0D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		25D3137115EF68C0004A6D0D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		25D3137215EF68C0004A6D0D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		25D3137415EF73AF004A6D0D /* star_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_24.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +101,6 @@
 		2528C01F15E408000028252D /* SmilesAndTears */ = {
 			isa = PBXGroup;
 			children = (
-				25526CD415E4433000FC1206 /* waters.mp3 */,
 				2528C02815E408000028252D /* AppDelegate.h */,
 				2528C02915E408000028252D /* AppDelegate.m */,
 				2528C03915E41BBE0028252D /* FaceView.h */,
@@ -114,7 +116,10 @@
 		2528C02015E408000028252D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				25D3137415EF73AF004A6D0D /* star_24.png */,
 				25D3136F15EF649E004A6D0D /* Default.png */,
+				25D3137115EF68C0004A6D0D /* MBProgressHUD.h */,
+				25D3137215EF68C0004A6D0D /* MBProgressHUD.m */,
 				25D3136D15EF6498004A6D0D /* Default@2x.png */,
 				25D3136B15EF63DA004A6D0D /* Icon@2x.png */,
 				25D3136815EF63D1004A6D0D /* Icon.png */,
@@ -179,11 +184,11 @@
 			files = (
 				2528C02415E408000028252D /* InfoPlist.strings in Resources */,
 				2528C03415E40A820028252D /* SmilesAndTearsViewController.xib in Resources */,
-				25526CD515E4433000FC1206 /* waters.mp3 in Resources */,
 				25D3136915EF63D1004A6D0D /* Icon.png in Resources */,
 				25D3136C15EF63DA004A6D0D /* Icon@2x.png in Resources */,
 				25D3136E15EF6498004A6D0D /* Default@2x.png in Resources */,
 				25D3137015EF649E004A6D0D /* Default.png in Resources */,
+				25D3137515EF73AF004A6D0D /* star_24.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +203,7 @@
 				2528C02A15E408000028252D /* AppDelegate.m in Sources */,
 				2528C03315E40A820028252D /* SmilesAndTearsViewController.m in Sources */,
 				2528C03B15E41BBE0028252D /* FaceView.m in Sources */,
+				25D3137315EF68C0004A6D0D /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
